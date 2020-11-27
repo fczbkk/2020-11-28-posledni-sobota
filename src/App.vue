@@ -1,30 +1,54 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <nav>
+    <router-link
+      v-for="(route, i) of routes"
+      :key="i"
+      :to="route.path"
+      :class="{highlight: $router.currentRoute.value.path === route.path}"
+    >
+      {{ route.name }}
+    </router-link>
+  </nav>
+  <router-view />
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { routes } from '@/router'
 
-#nav {
-  padding: 30px;
+export default {
+  setup () {
+    return {
+      routes
+    }
+  }
 }
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+<style scoped>
+  ::v-global(body) {
+    background: #fff;
+    color: #333;
+    font-family: helvetica, arial, sans-serif;
+    padding: 2em;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 0.25em solid transparent;
+  }
+
+  .highlight {
+    border-bottom-color: #333;
+  }
 </style>
