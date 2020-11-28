@@ -1,7 +1,7 @@
 <template>
   <h2>Enterprise</h2>
   <p>
-    <button @click="beamUp()">Beam me up, Scotty</button>
+    <button @click="destination = '.enterprise'">Beam me up, Scotty</button>
   </p>
 
   <div class="enterprise"></div>
@@ -22,10 +22,8 @@ export default {
   name: 'TheEnterprise',
   setup () {
     const destination = ref('.planet')
-    const beamUp = () => destination.value = '.enterprise'
     return {
-      destination,
-      beamUp
+      destination
     }
   }
 }
