@@ -1,24 +1,11 @@
-# 2020-11-28-posledni-sobota
+# Ako pomocou noviniek vo Vue 3 urobiť lepšie formuláre
 
-## Project setup
+Podklady k prednáške na Poslední Sobotě, 28.11.2020:
+https://www.posobota.cz/
+
+## Ako rozbehať ukážky
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
