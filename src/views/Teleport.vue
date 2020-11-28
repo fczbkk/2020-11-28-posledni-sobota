@@ -13,18 +13,3 @@ export default {
   components: { ThePlanet, TheEnterprise },
 }
 </script>
-
-<style scoped>
-  ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    flex: 1;
-    border: 1px solid red;
-  }
-</style>
