@@ -23,19 +23,9 @@ export const routes = [
     component: () => import('../views/Model.vue')
   },
   {
-    path: '/transitions',
-    name: 'Transitions',
-    component: () => import('../views/Transition.vue')
-  },
-  {
     path: '/teleport',
     name: 'Teleport',
     component: () => import('../views/Teleport.vue')
-  },
-  {
-    path: '/suspense',
-    name: 'Suspense',
-    component: () => import('../views/Suspense.vue')
   }
 ]
 
